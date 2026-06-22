@@ -25,20 +25,7 @@ for file in files:
 
     ## Data Quality Check:
 
-folder = "data/raw"
-
-files = [f for f in os.listdir(folder) if f.endswith(".csv")]
-
-for file in files:
-
-    path = os.path.join(folder, file)
-
-    df = pd.read_csv(path)
-
     print("\n", file)
-
-    print("Shape:")
-    print(df.shape)
 
     print("Missing Values:")
     print(df.isnull().sum())
